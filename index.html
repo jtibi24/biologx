@@ -10,153 +10,122 @@
       font-family: monospace;
       background: #0a0a0a url('background.png') no-repeat center top fixed;
       background-size: cover;
-      background-attachment: fixed;
       color: #f2f2f2;
       overflow-x: hidden;
     }
-
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 2rem;
+      padding: 1.5rem;
       background-color: rgba(0, 0, 0, 0.85);
       border-radius: 12px;
       animation: fadeIn 1.2s ease-out;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.015); }
-      100% { transform: scale(1); }
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px red; }
+      20% { text-shadow: -2px -2px cyan; }
+      40% { text-shadow: 2px -2px lime; }
+      60% { text-shadow: -2px 2px magenta; }
+      80% { text-shadow: 1px 1px yellow; }
+      100% { text-shadow: none; }
     }
-
     h1 {
       text-align: center;
-      font-size: 24px;
-      white-space: pre-wrap;
+      font-size: 3.5rem;
+      margin: 2rem 0 1rem;
       color: white;
-      animation: zoomUp 1.2s ease-out;
+      animation: glitch 1s infinite;
     }
-
-    @keyframes zoomUp {
-      from { transform: scale(0.9) translateY(20px); opacity: 0; }
-      to { transform: scale(1) translateY(0); opacity: 1; }
-    }
-
     h2 {
       text-align: center;
-      margin-top: 3rem;
-      font-size: 20px;
-      animation: fadeIn 1s ease-in;
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
     }
-
-    .ascii-header {
-      font-size: 14px;
-      line-height: 1.2;
-      text-align: center;
-      color: white;
-      white-space: pre;
-      margin-bottom: 2rem;
-    }
-
     .ascii-box {
       border: 2px dashed white;
       padding: 1rem;
       margin: 2rem 0;
       white-space: pre-wrap;
-      animation: fadeIn 1.5s ease;
+      font-size: 0.9rem;
     }
-
     .flex-box {
       display: flex;
       justify-content: space-between;
-      gap: 2rem;
+      gap: 1rem;
       flex-wrap: wrap;
+      font-size: 0.9rem;
     }
-
     .flex-item {
       flex: 1;
     }
-
     iframe {
       display: block;
       margin: 2rem auto;
       max-width: 100%;
     }
-
     img, video {
-      width: 100%;
-      margin: 1rem 0;
+      width: 95%;
+      margin: 1rem auto;
+      display: block;
       border-radius: 8px;
-      transition: transform 0.4s ease;
-      animation: fadeIn 1.2s ease;
+      transition: transform 0.3s ease;
     }
-
     img:hover, video:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
-
     .row {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
       justify-content: center;
     }
-
     .row img {
-      width: 48%;
-      animation: pulse 4s infinite ease-in-out;
+      width: 46%;
     }
-
     a {
       color: #ffffff;
       text-decoration: none;
     }
-
     video.small {
-      max-width: 560px;
+      max-width: 500px;
       height: auto;
       margin: 1rem auto;
       display: block;
     }
-
-    @media (max-width: 600px) {
-      body {
-        background-attachment: fixed;
-        background-size: contain;
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
       }
-
       .row img {
         width: 100%;
+      }
+      img, video {
+        width: 100%;
+      }
+      .flex-box {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="ascii-header">
-      ______  ___   _____  __       _______  __   __  _______  __   __  __   __<br>
-     |      ||   | |     ||  |     |       ||  | |  ||       ||  |_|  ||  | |  |<br>
-     |  _    ||   | |   --||  |     |   _   ||  |_|  ||   _   ||       ||  |_|  |<br>
-     | | |   ||   | |  |  ||  |     |  | |  ||       ||  | |  ||       ||       |<br>
-     |_|_|   ||___| |__|__||__|     |__| |__||_______||__| |__||_______||_______|
-    </div>
+    <h1>BIOLOGX</h1>
 
     <div class="ascii-box flex-box">
       <div class="flex-item">
-        Email: <a href="mailto:info.biologx@gmail.com">info.biologx@gmail.com</a>
+        > Email: <a href="mailto:info.biologx@gmail.com">info.biologx@gmail.com</a>
       </div>
       <div class="flex-item">
-        Instagram: <a href="https://instagram.com/_biologx" target="_blank">@_biologx</a>
+        > Instagram: <a href="https://instagram.com/_biologx" target="_blank">@_biologx</a>
       </div>
     </div>
 
-    <h2>Listen</h2>
+    <h2>> Listen</h2>
     <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1951994603/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://biologx.bandcamp.com/track/distant-swann">Distant Swann by BIOLOGX</a></iframe>
 
     <div class="row">
@@ -165,27 +134,27 @@
     </div>
 
     <div class="ascii-box">
-BIOLOGX is the dark-matter collaboration between Jason Tibi and Richard Toomer — a Brooklyn-based duo
-blending post-punk, industrial ambience, and frenetic breakbeats. Their sound emerges from the fog of
-disclosure, pulling inspiration from declassified intelligence, UAP phenomenon, and the metaphysics of
-remote viewing.
-
-Richard Toomer (Bed-Stuy, NY), founder of the band Secret Shopper, performs on dual Moog synthesizers,
-sculpting thick analog atmospheres. Jason Tibi (Ridgewood, NY), known for solo projects Swan Stalker and
-CD Player, drives BIOLOGX’s rhythm section using sequencers, grooveboxes, and disembodied samples. Tibi is
-also the founder of Search Results Press, and has worked as a composer on fashion films for Elena Velez
-and Weiraen (Shanghai).
-
-BIOLOGX debuted at Scorpion Records and the DLA Productions warehouse in Brooklyn. Their first EP,
-Remote Viewer, will be released in August 2025, preceded by a string of singles. Every performance is a
-transmission — a signal from a buried network — demanding disclosure.
+> BIOLOGX is the dark-matter collaboration between Jason Tibi and Richard Toomer — a Brooklyn-based duo
+> blending post-punk, industrial ambience, and frenetic breakbeats. Their sound emerges from the fog of
+> disclosure, pulling inspiration from declassified intelligence, UAP phenomenon, and the metaphysics of
+> remote viewing.
+>
+> Richard Toomer (Bed-Stuy, NY), founder of the band Secret Shopper, performs on dual Moog synthesizers,
+> sculpting thick analog atmospheres. Jason Tibi (Ridgewood, NY), known for solo projects Swan Stalker and
+> CD Player, drives BIOLOGX’s rhythm section using sequencers, grooveboxes, and disembodied samples. Tibi is
+> also the founder of Search Results Press, and has worked as a composer on fashion films for Elena Velez
+> and Weiraen (Shanghai).
+>
+> BIOLOGX debuted at Scorpion Records and the DLA Productions warehouse in Brooklyn. Their first EP,
+> Remote Viewer, will be released in August 2025, preceded by a string of singles. Every performance is a
+> transmission — a signal from a buried network — demanding disclosure.
     </div>
 
-    <h2>Video Stills</h2>
+    <h2>> Video Stills</h2>
     <video class="small" controls src="IMG_0821.mov"></video>
     <video class="small" controls src="IMG_5687.mov"></video>
 
-    <h2>Watch</h2>
+    <h2>> Watch</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/_UPWJEnaNmU?si=o4LTweIopblCl38D&amp;start=8513" title="BIOLOGX Live" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 </body>
