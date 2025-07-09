@@ -60,23 +60,11 @@
       background-color: #111;
       border: 1px solid #f2f2f2;
       position: relative;
+      transition: background-color 0.3s ease;
     }
 
-    .ascii-box::before,
-    .ascii-box::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background: #f2f2f2;
-    }
-
-    .ascii-box::before {
-      top: 0;
-    }
-
-    .ascii-box::after {
-      bottom: 0;
+    .ascii-box:hover {
+      background-color: #1a1a1a;
     }
 
     .ascii-box:before, .ascii-box:after {
@@ -102,6 +90,12 @@
       display: block;
       margin: 2rem auto;
       max-width: 100%;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    }
+
+    iframe:hover {
+      transform: scale(1.02);
     }
 
     img, video {
@@ -110,6 +104,7 @@
       display: block;
       border-radius: 8px;
       transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     }
 
     img:hover, video:hover {
@@ -124,7 +119,13 @@
     }
 
     .row img {
-      width: 46%;
+      width: 40%;
+    }
+
+    .bio-duo {
+      width: 70%;
+      margin: 2rem auto 1rem;
+      display: block;
     }
 
     a {
@@ -149,6 +150,9 @@
       .flex-box {
         flex-direction: column;
       }
+      .bio-duo {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -168,22 +172,31 @@
     <h2>> Listen</h2>
     <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1951994603/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://biologx.bandcamp.com/track/distant-swann">Distant Swann by BIOLOGX</a></iframe>
 
+    <img class="bio-duo" src="bio-press-duo.png" alt="BIOLOGX duo" />
+
     <div class="row">
       <img src="richard noise.png" alt="Richard performing" />
       <img src="jason noise.png" alt="Jason performing" />
     </div>
 
-    <div class="ascii-box">
+    <details>
+      <summary style="cursor: pointer; font-size: 1.1rem; margin-top: 2rem; color: #7ccfff;">▶ BIO</summary>
+      <div class="ascii-box">
 > BIOLOGX is the dark-matter collaboration between Jason Tibi and Richard Toomer — a Brooklyn-based duo blending post-punk, industrial ambience, and frenetic breakbeats. Their sound emerges from the fog of disclosure, pulling inspiration from declassified intelligence, UAP phenomenon, and the metaphysics of remote viewing.
 
 > Richard Toomer (Bed-Stuy, NY), founder of the band Secret Shopper, performs on dual Moog synthesizers, sculpting thick analog atmospheres. Jason Tibi (Ridgewood, NY), known for solo projects Swan Stalker and CD Player, drives BIOLOGX’s rhythm section using sequencers, grooveboxes, and disembodied samples. Tibi is also the founder of Search Results Press, and has worked as a composer on fashion films for designers Elena Velez and Weiraen (Shanghai).
 
 > BIOLOGX debuted at Scorpion Records and the DLA Productions warehouse in Brooklyn. Their first EP, Remote Viewer, will be released in August 2025, preceded by a string of singles. Every performance is a transmission — a signal from a buried network — demanding disclosure.
-    </div>
+      </div>
+    </details>
 
-    <h2>> Video Stills</h2>
-    <video class="small" controls src="IMG_0821.mov"></video>
-    <video class="small" controls src="IMG_5687.mov"></video>
+    <details>
+      <summary style="cursor: pointer; font-size: 1.1rem; margin-top: 2rem; color: #7ccfff;">▶ VIDEO STILLS</summary>
+      <div>
+        <video class="small" controls src="IMG_0821.mov"></video>
+        <video class="small" controls src="IMG_5687.mov"></video>
+      </div>
+    </details>
 
     <h2>> Watch</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/_UPWJEnaNmU?si=o4LTweIopblCl38D&amp;start=8513" title="BIOLOGX Live" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
