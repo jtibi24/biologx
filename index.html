@@ -7,16 +7,15 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('background.png') no-repeat center center fixed;
-      background-size: cover;
+      font-family: monospace;
+      background: #0a0a0a;
       color: #f2f2f2;
     }
     .container {
       max-width: 900px;
       margin: auto;
       padding: 2rem;
-      background-color: rgba(0, 0, 0, 0.75);
+      background-color: rgba(0, 0, 0, 0.85);
       border-radius: 12px;
       animation: fadeIn 1.5s ease;
     }
@@ -26,6 +25,7 @@
     }
     h1, h2 {
       text-align: center;
+      margin: 1rem 0;
     }
     img, video {
       width: 100%;
@@ -50,21 +50,24 @@
       margin: 2rem auto;
       max-width: 100%;
     }
-    .contact {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
+    .ascii-box {
+      border: 2px dashed #7ccfff;
+      padding: 1rem;
+      margin: 2rem 0;
+      white-space: pre-wrap;
     }
-    .social a {
-      color: #f2f2f2;
-      text-decoration: none;
-      margin: 0 0.5rem;
+    .flex-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .flex-item {
+      flex: 1;
     }
     a {
       color: #7ccfff;
+      text-decoration: none;
     }
     video.small {
       max-width: 560px;
@@ -72,21 +75,20 @@
       margin: 1rem auto;
       display: block;
     }
-    .bio {
-      margin-top: 1rem;
-      line-height: 1.6;
-      animation: fadeIn 1.5s ease 0.5s both;
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>BIOLOGX</h1>
 
-    <div class="contact">
-      <p><strong>Email:</strong> <a href="mailto:info.biologx@gmail.com">info.biologx@gmail.com</a></p>
-      <div class="social">
-        <a href="https://instagram.com/_biologx" target="_blank">Instagram</a>
+    <div class="ascii-box flex-box">
+      <div class="flex-item">
+        Email:
+        <a href="mailto:info.biologx@gmail.com">info.biologx@gmail.com</a>
+      </div>
+      <div class="flex-item">
+        Instagram:
+        <a href="https://instagram.com/_biologx" target="_blank">@_biologx</a>
       </div>
     </div>
 
@@ -98,12 +100,12 @@
       <img src="jason noise.png" alt="Jason performing" />
     </div>
 
-    <div class="bio">
-      <p><strong>BIOLOGX</strong> is the dark-matter collaboration between Jason Tibi and Richard Toomer — a Brooklyn-based duo blending post-punk, industrial ambience, and frenetic breakbeats. Their sound emerges from the fog of disclosure, pulling inspiration from declassified intelligence, UAP phenomenon, and the metaphysics of remote viewing.</p>
+    <div class="ascii-box">
+      <strong>BIOLOGX</strong> is the dark-matter collaboration between Jason Tibi and Richard Toomer — a Brooklyn-based duo blending post-punk, industrial ambience, and frenetic breakbeats. Their sound emerges from the fog of disclosure, pulling inspiration from declassified intelligence, UAP phenomenon, and the metaphysics of remote viewing.
 
-      <p>Richard Toomer (Bed-Stuy, NY), founder of the band <em>Secret Shopper</em>, performs on dual Moog synthesizers, sculpting thick analog atmospheres. Jason Tibi (Ridgewood, NY), known for solo projects <em>Swan Stalker</em> and <em>CD Player</em>, drives BIOLOGX’s rhythm section using sequencers, grooveboxes, and disembodied samples. Tibi is also the founder of <em>Search Results Press</em>, and has worked as a composer on fashion films for designers <em>Elena Velez</em> and <em>Weiraen (Shanghai)</em>.</p>
+      Richard Toomer (Bed-Stuy, NY), founder of the band <em>Secret Shopper</em>, performs on dual Moog synthesizers, sculpting thick analog atmospheres. Jason Tibi (Ridgewood, NY), known for solo projects <em>Swan Stalker</em> and <em>CD Player</em>, drives BIOLOGX’s rhythm section using sequencers, grooveboxes, and disembodied samples. Tibi is also the founder of <em>Search Results Press</em>, and has worked as a composer on fashion films for designers <em>Elena Velez</em> and <em>Weiraen (Shanghai)</em>.
 
-      <p>BIOLOGX debuted at <strong>Scorpion Records</strong> and the <strong>DLA Productions warehouse</strong> in Brooklyn. Their first EP, <em>Remote Viewer</em>, will be released in August 2025, preceded by a string of singles. Every performance is a transmission — a signal from a buried network — demanding disclosure.</p>
+      BIOLOGX debuted at <strong>Scorpion Records</strong> and the <strong>DLA Productions warehouse</strong> in Brooklyn. Their first EP, <em>Remote Viewer</em>, will be released in August 2025, preceded by a string of singles. Every performance is a transmission — a signal from a buried network — demanding disclosure.
     </div>
 
     <h2>Video Stills</h2>
