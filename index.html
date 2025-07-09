@@ -53,11 +53,37 @@
     }
 
     .ascii-box {
-      border: 2px dashed white;
       padding: 1rem;
       margin: 2rem 0;
       white-space: pre-wrap;
       font-size: 0.95rem;
+      background-color: #111;
+      border: 1px solid #f2f2f2;
+      position: relative;
+    }
+
+    .ascii-box::before,
+    .ascii-box::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #f2f2f2;
+    }
+
+    .ascii-box::before {
+      top: 0;
+    }
+
+    .ascii-box::after {
+      bottom: 0;
+    }
+
+    .ascii-box:before, .ascii-box:after {
+      content: "+------------------------------------------+";
+      display: block;
+      text-align: center;
+      color: #f2f2f2;
     }
 
     .flex-box {
@@ -148,7 +174,11 @@
     </div>
 
     <div class="ascii-box">
-> BIOLOGX is a Brooklyn-based duo fusing post-punk energy with Aphex Twin-inspired techno. With moody synth atmospheres and industrial grooves, they explore themes of UAPs, astral projection, and classified government programs. Their debut EP Remote Viewer lands August 2025.
+> BIOLOGX is the dark-matter collaboration between Jason Tibi and Richard Toomer — a Brooklyn-based duo blending post-punk, industrial ambience, and frenetic breakbeats. Their sound emerges from the fog of disclosure, pulling inspiration from declassified intelligence, UAP phenomenon, and the metaphysics of remote viewing.
+
+> Richard Toomer (Bed-Stuy, NY), founder of the band Secret Shopper, performs on dual Moog synthesizers, sculpting thick analog atmospheres. Jason Tibi (Ridgewood, NY), known for solo projects Swan Stalker and CD Player, drives BIOLOGX’s rhythm section using sequencers, grooveboxes, and disembodied samples. Tibi is also the founder of Search Results Press, and has worked as a composer on fashion films for designers Elena Velez and Weiraen (Shanghai).
+
+> BIOLOGX debuted at Scorpion Records and the DLA Productions warehouse in Brooklyn. Their first EP, Remote Viewer, will be released in August 2025, preceded by a string of singles. Every performance is a transmission — a signal from a buried network — demanding disclosure.
     </div>
 
     <h2>> Video Stills</h2>
