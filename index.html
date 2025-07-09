@@ -10,6 +10,11 @@
       font-family: monospace;
       background: #0a0a0a;
       color: #f2f2f2;
+      animation: fadeIn 1.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .container {
       max-width: 900px;
@@ -19,76 +24,71 @@
     h1 {
       text-align: center;
       font-size: 3rem;
-      margin-bottom: 1rem;
     }
     .ascii-box {
-      background: #111;
-      border: 1px solid #f2f2f2;
+      border: 2px dashed #7ccfff;
       padding: 1rem;
       margin: 2rem 0;
       white-space: pre-wrap;
-      font-size: 0.95rem;
+      background: #111;
+      box-shadow: 0 0 10px #000;
+    }
+    .flex-box {
       display: flex;
       justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
-    .ascii-box a {
+    .flex-item {
+      flex: 1;
+    }
+    a {
       color: #7ccfff;
       text-decoration: none;
     }
-    iframe, video, img {
-      display: block;
-      max-width: 100%;
-      margin: 1rem auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .ascii-break {
+      text-align: center;
+      margin: 2rem 0;
+      color: #7ccfff;
     }
-    iframe:hover, video:hover, img:hover {
+    img, video, iframe {
+      max-width: 100%;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+    img:hover, video:hover, iframe:hover {
       transform: scale(1.02);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+    .ascii-border {
+      border: 1px dashed #7ccfff;
+      padding: 0.5rem;
+      margin: 2rem 0;
     }
     .collapsible {
-      background-color: #111;
+      background-color: #222;
       color: white;
       cursor: pointer;
       padding: 10px;
       width: 100%;
-      text-align: left;
       border: none;
+      text-align: left;
       outline: none;
       font-size: 1.2rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
     .active, .collapsible:hover {
-      background-color: #222;
+      background-color: #333;
     }
     .content {
-      padding: 0 1rem;
-      max-height: 0;
+      padding: 0 18px;
+      display: none;
       overflow: hidden;
-      transition: max-height 0.3s ease-out;
-    }
-    .row {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .row img {
-      width: 48%;
-    }
-    .duo-photo {
-      max-width: 80%;
-    }
-    @media (max-width: 600px) {
-      .ascii-box {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-      }
-      .row img {
-        width: 100%;
-      }
+      background-color: #111;
+      border-left: 2px solid #7ccfff;
+      border-right: 2px solid #7ccfff;
+      margin-bottom: 2rem;
     }
   </style>
 </head>
@@ -96,20 +96,22 @@
   <div class="container">
     <h1>BIOLOGX</h1>
 
-    <div class="ascii-box">
-      <div>
+    <div class="ascii-box flex-box">
+      <div class="flex-item">
         <strong>> Email:</strong><br>
         <a href="mailto:info.biologx@gmail.com">info.biologx@gmail.com</a>
       </div>
-      <div>
+      <div class="flex-item">
         <strong>> Instagram:</strong><br>
         <a href="https://instagram.com/_biologx" target="_blank">@_biologx</a>
       </div>
     </div>
 
-    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1951994603/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://biologx.bandcamp.com/track/distant-swann">Distant Swann by BIOLOGX</a></iframe>
+    <div class="ascii-break">––––––––––––––––––––––––––––––––––––––––––––––––</div>
 
-    <img src="bio-press-duo.png" alt="BIOLOGX duo" class="duo-photo" />
+    <div class="ascii-border">
+      <img src="bio-press-duo.png" alt="BIOLOGX Duo" style="width: 85%; display: block; margin: auto;" />
+    </div>
 
     <button class="collapsible">BIO</button>
     <div class="content">
@@ -126,28 +128,33 @@
     <div class="content">
       <video class="small" controls src="IMG_0821.mov"></video>
       <video class="small" controls src="IMG_5687.mov"></video>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_UPWJEnaNmU?si=o4LTweIopblCl38D&amp;start=8513" title="BIOLOGX Live" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_UPWJEnaNmU?si=o4LTweIopblCl38D&amp;start=8513" title="BIOLOGX Live" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <button class="collapsible">MUSIC</button>
+    <div class="content">
+      <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1951994603/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://biologx.bandcamp.com/track/distant-swann">Distant Swann by BIOLOGX</a></iframe>
+    </div>
 
-    <div class="row">
-      <img src="richard noise.png" alt="Richard performing" />
-      <img src="jason noise.png" alt="Jason performing" />
+    <div class="ascii-box row">
+      <img src="richard noise.png" alt="Richard performing" style="width: 45%;" />
+      <img src="jason noise.png" alt="Jason performing" style="width: 45%;" />
     </div>
   </div>
+
   <script>
-    const collapsibles = document.querySelectorAll(".collapsible");
-    collapsibles.forEach(button => {
-      button.addEventListener("click", () => {
-        button.classList.toggle("active");
-        const content = button.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
+    const coll = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
         } else {
-          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.display = "block";
         }
       });
-    });
+    }
   </script>
 </body>
 </html>
